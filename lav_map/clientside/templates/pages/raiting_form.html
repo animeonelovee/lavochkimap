@@ -1,0 +1,26 @@
+{% load static %}
+<form action="{% url 'add_rating' %}" method="post" enctype="multipart/form-data" name="rating-form">
+    {% csrf_token %}
+    <input type="hidden" value="{{lav_obj.id}}" name="lav_id">
+    <div class="row align-items-center g-0">
+        <div class="rating-area">
+            {% for k, v in form.fields.rating.choices %}
+                {% if rating >= forloop.revcounter %}
+                    <input id="rating{{v}}" type="radio" name="rating" value="{{v}}">
+                    <label for="rating{{v}}" class="active"></label>
+                {% else %}
+                    <input id="rating{{v}}" type="radio" name="rating" value="{{v}}">
+                    <label for="rating{{v}}"></label>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="col" id="sum-rating">
+            {{ rating|floatformat:1 }}
+        </div>
+    </div>
+    <div id="my-rating">
+        Моя оценка: {{ my_rating }}
+    </div>
+</form>
+
+<script src="{% static 'js/raiting_form.js' %}"></script>

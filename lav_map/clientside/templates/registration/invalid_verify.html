@@ -1,0 +1,17 @@
+{% extends "root.html" %}
+
+{% block title %}Лавочки map{% endblock %}
+
+{% block content %}
+    {% include 'el/header.html' %}
+
+
+    <div class="container" id="content" style="min-height: 83.6vh;">
+
+        <p>Ваша ссылка не корректна, залогиньтесь снова</p>
+        <a href="{% url 'login' %}">Войти</a>
+        
+    </div>
+
+    {% include 'el/footer.html' %}
+{% endblock %}

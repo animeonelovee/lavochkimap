@@ -1,0 +1,12 @@
+{% extends 'admin/change_form.html' %}
+
+{% block submit_buttons_bottom %}
+    <div class="send-email">
+        <h2>Отправить сообщение на почту</h2>
+        <textarea id="message" name="message" rows="10" cols="50" placeholder="Сообщение..."></textarea>
+        <br>
+        <input type="submit" value="Отправить на почту" name="send-email"> 
+    </div>
+    {{ block.super }}
+{% endblock %}
+

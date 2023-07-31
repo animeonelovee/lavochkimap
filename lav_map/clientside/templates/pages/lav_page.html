@@ -1,0 +1,123 @@
+{% extends "root.html" %}
+{% load static %}
+
+{% block title %}Лавочки map{% endblock %}
+
+{% block content %}
+    {% include 'el/header.html' %}
+
+    <div class="container g-0" id="content">
+        <h2 class="h2-offset">Лавочка #{{lav_obj.id}}</h2>
+        <div style="padding: 20px 30px 30px 30px;">
+            <div class="row" id="lav-content">
+                <div class="col">
+                    <div id="carouselExampleIndicators" class="carousel carousel-dark slide">
+                        <div class="carousel-indicators">
+                            {% for ph in photo_obj %}
+                            {% if forloop.counter0 == 0 %}
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{forloop.counter0}}" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                {% else %}
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{forloop.counter0}}" aria-label="Slide 2"></button>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="carousel-inner text-center" id="myImg">
+                            {% for ph in photo_obj %}
+                                {% if forloop.first %}
+                                <div class="carousel-item active divimg" style="background-image: url({{ph.image_path.url}});">
+                                </div>   
+                                {% else %}
+                                <div class="carousel-item divimg" style="background-image: url({{ph.image_path.url}});">
+                                </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="w-100" id="space2"></div>
+
+                <div class="col lavdesc">
+                    <h2>Описание</h2>
+                    <div><p>{{lav_obj.description}}</p></div>
+                    Спинка: {{lav_obj.is_spinka|yesno:"Да,Нет,Неизвестно"}}
+                    <br>
+                    Тень: {{lav_obj.is_ten|yesno:"Да,Нет,Неизвестно"}}
+                    <br>
+                    Падик: {{lav_obj.is_padik|yesno:"Да,Нет,Неизвестно"}}
+                    <hr>
+                    Добавлено: {{lav_obj.user.username}}
+                    <div id="rating-form">
+                        {% include 'pages/raiting_form.html' %} 
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal">
+                <span class="close">&times;</span> 
+                <div id="carouselExampleIndicators2" class="carousel slide">
+                    <div class="carousel-indicators">
+                        {% for ph in photo_obj %}
+                        {% if forloop.counter0 == 0 %}
+                            <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="{{forloop.counter0}}" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            {% else %}
+                            <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="{{forloop.counter0}}" aria-label="Slide 2"></button>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <div class="carousel-inner text-center" style="width: 90vw; height: 90vh;">
+                        {% for ph in photo_obj %}
+                            {% if forloop.first %}
+                            <div class="carousel-item active slide3" style="background-image: url({{ph.image_path.url}});">
+                            </div>   
+                            {% else %}
+                            <div class="carousel-item slide3" style="background-image: url({{ph.image_path.url}});">
+                            </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        <div class="container-fluid g-0">
+            <img src="{% static 'media/ndev.png' %}" class="img-fluid">   
+        </div>
+
+    </div>
+
+    {% include 'el/footer.html' %}
+{% endblock %}
+
+{% block script %}
+
+<script>
+    $(function() {
+        $('#myImg').click(function(){
+            $('.modal').fadeToggle(100).css('display', 'flex');;
+            document.getElementById("lav-content").hidden = true;
+        });
+        $('.close').click(function(){
+            $('.modal').fadeToggle(100);
+            document.getElementById("lav-content").hidden = false;
+        });
+    });
+</script>
+
+{% endblock %}

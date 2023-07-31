@@ -1,0 +1,48 @@
+{% extends "root.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}Лавочки map{% endblock %}
+
+{% block content %}
+    {% include 'el/header.html' %}
+
+    <div class="container g-0" id="content">
+        <h2 class="h2-offset">Профиль</h2>
+
+        <div id="profile">
+
+            <form action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+
+                <div class="row">
+                    <div class="col text-cen">
+                            <div class="profile-img" style="background-image: url({{user.photo.url}});">
+                                <label class="input-a" for="id_photo">Изменить фотографию</label>
+                            </div>
+                        {{ form.photo}}
+                    </div>
+                    <div class="col">
+                        <h1>{{ user.username }}</h1>
+                        {{ form.name|as_crispy_field }}
+                        Добавлено лавочек: {{sum_lav}}
+                        <br>
+                        <div style="margin-top: 78px;">
+                            <input type="submit" class="submit-btn" value="Сохранить">
+                            <br>
+                            <a href="{% url 'password_reset' %}" class="submit-a">Изменить пароль</a> 
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+
+        <div class="container-fluid g-0">
+            <img src="{% static 'media/ndev.png' %}" class="img-fluid">   
+        </div>
+    </div>
+
+    {% include 'el/footer.html' %}
+{% endblock %}

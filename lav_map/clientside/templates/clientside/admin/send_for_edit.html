@@ -1,0 +1,8 @@
+{% autoescape off %}
+
+    Здравствуйте {{ user }},
+    Пожалуйста перейдите по сылке, чтобы начать редактирование лавочки.
+    {{ message }}
+    {{ protocol }}://{{ domain }}{% url 'edit_form' lav_id=lavid %}
+
+{% endautoescape %}

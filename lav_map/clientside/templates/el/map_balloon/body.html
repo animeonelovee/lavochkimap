@@ -1,0 +1,17 @@
+<div>
+    <div class="body-ballon" style="background-image: url({{photo_lav}});"></div>
+    <div style="width: 235px;"><b>Спинка:</b> {{is_spinka|yesno:"Да,Нет,Неизвестно"}}, <b>Тень:</b> {{is_ten|yesno:"Да,Нет,Неизвестно"}}, <b>Падик:</b> {{is_padik|yesno:"Да,Нет,Неизвестно"}}</div>
+    <div class="row text-center">
+        <div class="col rating-result">
+            {% for i in '12345'|make_list %}
+                {% if rating >= forloop.counter %}
+                    <span class="active"></span>
+                {% else %}
+                    <span></span>
+                {% endif %}
+            {% endfor %} 
+            {{ rating|floatformat:1 }}
+        </div>
+        <div class="col-5"><a href="/lav/{{id}}">Подробнее</a></div>
+    </div>
+</div>

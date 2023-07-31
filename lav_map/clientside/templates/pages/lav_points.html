@@ -1,0 +1,27 @@
+{% extends "root.html" %}
+{% load static %}
+
+{% block title %}Лавочки map{% endblock %}
+
+{% block content %}
+    {% include 'el/header.html' %}
+
+    <div class="container g-0" id="content">
+        <h2 class="h2-offset">Найти лавочку</h2>
+        <div class="map_point" id="map"></div>    
+        <div class="container-fluid g-0">
+            <img src="{% static 'media/ndev.png' %}" class="img-fluid">   
+        </div>
+    </div>
+    {% include 'el/footer.html' %}
+{% endblock %}
+
+
+{% block script %}
+<script>
+    var STATIC_URL = "{% static '' %}";
+</script>
+
+<script src="{% static 'js/lav_points.js' %}"></script>
+
+{% endblock %}

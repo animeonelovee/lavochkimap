@@ -1,0 +1,39 @@
+{% extends "root.html" %}
+{% load static %}
+
+{% block title %}Лавочки map{% endblock %}
+
+{% block content %}
+    {% include 'el/header.html' %}
+
+    <div class="container g-0" id="content">
+
+        <div class="row align-items-end g-0">
+            <div class="flex text-center" id="hello">
+                <div class="hello-div">
+                    <p id="hello1">Добро пожаловать в</p>
+                    <img class="img-fluid" src="{% static 'media/logo.png' %}" width="780px" height="108px">
+                    <p id="hello2">Сервис по поиску ближайших лавочек в <br> вашем городе</p>
+                </div>
+            </div>
+            <div class="tree">
+                <img style="width: 1320px;" src="{% static 'media/vdev.png' %}" class="img-fluid">   
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center" id="polos">
+            <a href="/lav_points" class="reslav">Найти лавочку рядом</a>
+        </div>
+
+        <div class="flex text-center" id="descrip">
+            <div class="flex text-center">
+                <p class="desc">Описание</p>
+                <p class="desc-text">Добро пожаловать, наш сервис поможет вам быстро и легко найти ближайшие лавочки, где вы сможете расслабиться, насладиться свежим воздухом и настроиться на позитивный лад. Просто введите своё местоположение, и мы покажем вам все ближайшие лавочки на карте. Наслаждайтесь отдыхом и приятным времяпровождением с нашим сервисом!</p>
+                <a href="https://www.donationalerts.com/r/lavochkimap" class="support"><img src="{% static 'media/coin.png' %}" width="50px" id="coin">Поддержать проект</a> 
+            </div>   
+        </div>
+
+    </div>
+
+    {% include 'el/footer.html' %}
+{% endblock %}

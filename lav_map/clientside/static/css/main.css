@@ -1,0 +1,564 @@
+@font-face {
+    font-family: "CENTURY GOTHIC";
+    src: url("../fonts/centurygothic.ttf");
+}
+
+body{
+    background-color: #FBF6E9;
+}
+
+html, body {font-size: 17px; font-family: "CENTURY GOTHIC"; }
+/* ---------------------------------------------------------------------------------------------------------------- */
+#footer{
+    padding: 1rem;
+    background-color: #303134;
+    color: #8B8784;
+    max-width: 1320px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#coin {
+    margin-right: 13px;
+}
+
+.desc-text {
+    margin: 0 10px 50px 10px;
+}
+
+#footer .col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#sum-rating{
+    line-height: 32px;
+}
+
+#footer .col p{
+    font-size: 12pt;
+    margin: 0%;
+}
+/* ---------------------------------------------------------------------------------------------------------------- */
+#header{
+    background-color: #FBF6E9;
+    color: #000000;
+    border-bottom:3px solid #000000;
+    padding-top: 0.5rem;
+    max-width: 1320px;
+    min-height: 79px;
+}
+
+#header .login_btn{
+    color: #000000;
+    font-weight: bold;
+    font-family: "CENTURY GOTHIC";
+    text-decoration: none;
+    font-size: 18px;
+
+}
+
+#header .nav_btn{
+    font-weight: 400;
+    font-family: "CENTURY GOTHIC";
+    color: #000000;
+    text-decoration: none;
+    font-size: 18px;
+
+}
+
+/* ---------------------------------------------------------------------------------------------------------------- */
+#content{
+    min-height: 100%;
+    background-color: #FBF6E9;
+    max-width: 1320px;
+    padding-right: 0.75;
+    padding-left: 0.75;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#add-form{
+    min-height: 100%;
+    background-color: #FBF6E9;
+    max-width: 1320px;
+    padding-right: 0.75;
+    padding-left: 0.75;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#divres{
+    background-color: #303134;
+    max-width: 1320px;
+    padding: 30px;
+}
+
+.reslav {
+    color: #000000;
+    font-weight: bold;
+    font-family: "CENTURY GOTHIC";
+    text-decoration: none;
+    background: #74D37C;
+    border: 2px solid #000000;
+    font-size: 17px;
+    padding: 1rem 2rem 1rem 2rem;
+}
+
+.support {
+    color: #000000;
+    font-weight: bold;
+    font-family: "CENTURY GOTHIC";
+    text-decoration: none;
+    background: #FBF6E9;
+    border: 2px solid #000000;
+    font-size: 17px;
+    padding: 1rem 1.2rem 1rem 1.2rem;
+}
+
+#polos{
+    background-color: #303134;
+    /*padding: 4vh;*/
+    min-height: 90px;
+}
+
+#hello{
+    background-color: #EEBB6D;
+    height: 79vh;
+    min-height: 650px;
+}
+
+#descrip{
+    background-color: #C6EDDD;
+    height: 66vh;
+    min-height: 550px; 
+    
+}
+
+#profile{
+    min-height: 70vh;
+    padding: 30px 30px 30px 30px;
+}
+
+.font-size{
+    font-size: 17px;
+}
+
+.body-ballon {
+    height: 145px;
+    width: 235px;
+    background-size: cover;
+    background-position: 50% 50%;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+#logo {
+    margin: 12px 0 12px 0;
+}
+/* ---------------------------------------------------------------------------------------------------------------- */
+.map_point{
+    height: 80vh;
+    padding: 10px 30px 10px 30px;
+}
+#drev {
+    width: 78.5vw;
+}
+.round {
+    border-radius: 50%;
+    outline: 1px solid #000000;
+    background-size: cover; 
+    background-position: 50% 50%;
+    width: 60px;
+    height: 60px;
+   }
+  
+.file_input_id{
+    display:none;
+  }
+
+.input-a:hover{
+    display: block    
+}
+
+.input-a{
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    position: absolute;
+    display: none;
+    background-color: #d0d0d0a3;
+    padding: 8px 60px 8px 60px;
+    bottom: 0.3%;
+    width: 328px;
+  }
+
+.profile-img {
+    border: 1px solid #000000;
+    background-size: cover; 
+    background-position: 50% 50%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 330px;
+    height: 330px;
+}
+
+.profile-img:hover > .input-a {display: block}
+
+.submit-btn{
+    font-weight: 400;
+    font-family: "CENTURY GOTHIC";
+    color: #000000;
+    margin-top: 30px;
+    padding: 5px;
+}
+
+.submit-a{
+    font-weight: 400;
+    font-family: "CENTURY GOTHIC";
+    color: #000000;
+    margin-top: 30px;
+}
+
+#btn-menu {
+    display: none;
+    text-align: end;
+}
+
+.col-2_5 {
+    flex: 0 0 25%;
+    width: auto;
+    text-align: start!important;
+}
+
+.col-out {
+    flex: 0 0 0%;
+}
+
+.col-p-logo {
+    flex: 0 0 auto;
+    width: 16.66666667%;
+}
+
+#space {
+    display: none;
+}
+
+#space2 {
+    display: none;
+}
+
+.col-m {
+    flex: 1 0 0%;
+}
+
+.h2-offset {
+    padding: 10px 0 0 30px;
+}
+
+#prof {
+    justify-content: end;
+    display: flex;
+    text-align: end!important;
+}
+
+#hello1 {
+    color: #000000;
+    font-weight: 800;
+    font-family: "CENTURY GOTHIC";
+    font-size: 59px;
+}
+#hello2 {
+    color: #000000;
+    font-weight: 500;
+    font-family: "CENTURY GOTHIC";
+    font-size: 29.5px;
+    margin-top: 5px;
+    position: relative;
+    z-index: 5;
+}
+
+.divimg {
+    background-size: cover; 
+    background-position: 50% 50%;
+    height: 100%;
+}
+
+.slide3 {
+    height: 100%;
+    background: 50% 50%/contain no-repeat;
+}
+
+.text-cen {   
+    position: relative;
+}
+
+.border1 {
+    border: 1px solid #000000;
+}
+
+#id_photo {
+    display: none;
+}
+
+.alert{
+    margin: 10px 0 0 0;
+}
+
+.error-code{
+    font-weight: 600;
+    font-family: 'CENTURY GOTHIC';
+    font-size: 190px;
+    height: 250px;
+}
+
+.error-head{
+    font-weight: 600;
+    font-family: 'CENTURY GOTHIC';
+    font-size: 30px;
+}
+
+.error-disc{
+    font-weight: 400;
+    font-family: 'CENTURY GOTHIC';
+    font-size: 20px;
+}
+
+.error-a{
+    font-weight: 400;
+    font-family: 'CENTURY GOTHIC';
+    font-size: 18px;
+}
+
+.desc {
+    color: #000000;
+    font-weight: 800;
+    font-family: CENTURY GOTHIC;
+    font-size: 46px;
+}
+
+.tree {
+    display: flex;
+    position: absolute;
+    width: 1320px;
+    justify-content: flex-end;
+}
+
+.hello-div {
+    display: inline-block;
+    text-align: center;
+    margin: 120px 10px 0 10px;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------- */
+.rating-area {
+	overflow: hidden;
+	width: 170px;
+    flex: none;
+
+}
+
+.rating-area:not(:checked) > input {
+	display: none;
+}
+.rating-area:not(:checked) > label {
+	float: right;
+	width: 34px;
+	padding: 0;
+	cursor: pointer;
+	font-size: 32px;
+	line-height: 32px;
+	color: lightgrey;
+}
+.rating-area:not(:checked) > label:before {
+	content: '★';
+}
+
+#add-form .rating-area > input:checked ~ label {
+	color: gold;
+}
+
+.rating-area > label.active {
+	color: gold;
+}
+
+.rating-area:hover > label, label.active {
+	color: lightgrey;
+}
+
+.rating-area:hover > input:checked ~ label, label.active {
+	color: lightgrey;
+}
+
+.rating-area:not(:checked) > label:hover,
+.rating-area:not(:checked) > label:hover ~ label {
+	color: gold;
+}
+.rating-area > input:checked + label:hover,
+.rating-area > input:checked + label:hover ~ label,
+.rating-area > input:checked ~ label:hover,
+.rating-area > input:checked ~ label:hover ~ label,
+.rating-area > label:hover ~ input:checked ~ label {
+	color: gold;
+}
+.rate-area > label:active {
+	position: relative;
+}
+/* ---------------------------------------------------------------------------------------------------------------- */
+.rating-result {
+	width: auto;
+	margin: 0 auto;
+}
+.rating-result span {
+	padding: 0;
+	font-size: 16px;
+	line-height: 1;
+	color: lightgrey;
+}
+.rating-result > span:before {
+	content: '★';
+}
+.rating-result > span.active {
+	color: gold;
+}
+/* ---------------------------------------------------------------------------------------------------------------- */
+#myImg {
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid black;
+    height: 487.5px;
+    width: 650px;
+}
+
+#myImg:hover {opacity: 0.8;}
+
+.modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,1);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    z-index: 5;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------- */
+@media (max-width: 797px) {
+    #hello1 {
+        font-size: 7.4vw;
+    }
+    #hello2 {
+        font-size: 3.7vw;
+    }
+
+    .hello-div {
+        display: inline-block;
+        text-align: center;
+        margin-top: 21vh;
+    }
+
+    .desc {
+        font-size: 7.4vw;
+    }
+    
+}
+
+@media screen and (min-width: 1338px) {
+    #drev {
+        width: 1050px;
+    }
+}
+
+@media (max-width: 1038px) {
+    #nav-m {
+        display: none;
+        border-top: 3px solid rgb(0, 0, 0);
+        background-color: rgb(242, 225, 193);
+        padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
+    }
+
+    #btn-menu {
+        display: block;
+    }
+
+    #prof {
+        order: -1!important;
+    }
+
+    .col-m {
+        text-align: end!important;
+        flex: none;
+    }
+
+    .col-out {
+        text-align: end!important;
+        flex: none;
+    }
+
+    .col-p-logo {
+        text-align: end!important;
+        flex: none;
+        width: -webkit-fill-available;
+    }
+
+}
+
+@media (max-width: 955px) {
+    .lavdesc {
+        width: 245px;
+        flex: none;
+    }
+
+
+    #space2 {
+        display: block;
+    }
+
+    .lavdesc {
+        width: 100%;
+        flex: none;
+    }
+
+    .divimg {
+        position: absolute;
+        top: 0;
+    }
+
+    #myImg {
+        width: 100%;
+        padding-top: 75%;
+        height: auto;
+    }
+}
+/* ---------------------------------------------------------------------------------------------------------------- */

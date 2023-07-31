@@ -1,0 +1,56 @@
+{% load static %}
+
+<header>
+    <div  class="container" id="header">
+        <div class="row text-center align-items-center">
+            <div class="col-2_5">
+                <a href="/"><img src="{% static 'media/logo.png' %}" width="259px" height="36px" id="logo"></a>
+            </div>
+
+            <div class="col" id="btn-menu">
+                
+                <button type="button" id="pull" class="btn btn-outline">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="w-100" id="space"></div>
+
+            <div class="col" id="nav-m">
+                <div class="row align-items-center g-0">
+                    <div class="col-m">
+                        <a href="/" class="nav_btn">Главная</a>
+                    </div>
+                
+                    <div class="col-m">
+                        <a href="/lav_points" class="nav_btn">Найти лавочку</a>
+                    </div>
+                
+                    <div class="col-m">
+                        <a href="/add_form" class="nav_btn">Добавить лавочку </a>
+                    </div>
+                
+                        {% if user.is_authenticated %}
+                            <div class="col-p-logo align-items-center" id="prof">
+                                <a href="/profile" style="border-radius: 50%;">
+                                    <div class="round" style="background-image: url({{user.photo.url}});">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-out">
+                                <a href="{% url 'logout' %}" class=" login_btn" style="margin-left: 5px;">Выход</a>
+                            </div>
+                        {% else %}
+                            <div class="col-m" style="text-align: end!important;">
+                                <a href="{% url 'login' %}" class=" login_btn">Вход</a>
+                            </div>
+                        {% endif %}  
+                </div>
+            </div>
+        </div>         
+    </div>
+</header>
+
+<script src="{% static 'js/header.js' %}"></script>

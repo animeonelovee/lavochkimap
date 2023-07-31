@@ -1,0 +1,6 @@
+/.env.prod
+/.env.prod.db
+/docker-compose.prod.yml
+/nginx
+/lav_map/Dockerfile.prod
+/lav_map/entrypoint.prod.sh

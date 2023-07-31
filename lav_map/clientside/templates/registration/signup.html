@@ -1,0 +1,24 @@
+
+
+{% extends "root.html" %}
+{% load crispy_forms_tags %}
+{% block title %}Лавочки map{% endblock %}
+
+{% block content %}
+    {% include 'el/header.html' %}
+
+    <div class="container" id="content" style="min-height: 83.6vh;">
+
+        <h2>Регистрация</h2>
+
+        <form action="{% url 'signup' %}" method="post">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <input type="submit" class="submit-btn" value="Регистрация" style="margin-top: 15px;">
+
+        </form>
+
+    </div>
+
+    {% include 'el/footer.html' %}
+{% endblock %}
